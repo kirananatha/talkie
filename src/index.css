@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Extended Theme Palettes */
+  --color-clover-warm: #A98B76;
+  --color-clover-tan: #BFA28C;
+  --color-clover-cream: #F3E4C9;
+  --color-clover-sage: #BABF94;
+}
+
+@layer utilities {
+  /* Scrollbar control */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Notebook elements */
+  .notebook-ruled {
+    background-image: linear-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 100% 2rem;
+    line-height: 2rem;
+  }
+
+  /* Custom decorations */
+  @keyframes float-koi {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(15px, -15px) rotate(5deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes rotate-clover {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(15deg) scale(1.05);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
+  }
+
+  .koi-swim {
+    animation: float-koi 12s ease-in-out infinite;
+  }
+
+  .clover-sway {
+    animation: rotate-clover 8s ease-in-out infinite;
+  }
+
+  .particle-float {
+    animation: pulse-soft 6s ease-in-out infinite;
+  }
+}
+
+/* Base custom styles to handle overall application background styling */
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}

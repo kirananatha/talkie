@@ -1,0 +1,6 @@
+{
+  "name": "MeloTalk",
+  "description": "Platform latihan speaking Bahasa Inggris modern yang menggabungkan random speaking topics, voice recording, AI speech analysis, interview preparation, vocabulary learning, dan speaking progress tracking.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
